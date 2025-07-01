@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Untree.co" />
+  <link rel="shortcut icon" href="bbm.png" />
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap5" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+  <link rel="stylesheet" href="css/tiny-slider.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .input-group-smart {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #667eea;
+      z-index: 4;
+    }
+
+    .form-control-sm {
+      padding: 0.5rem 1rem 0.5rem 40px !important;
+      height: calc(1.5em + 1rem + 2px);
+      border: 2px solid #e0e0e0;
+      border-radius: 8px !important;
+      transition: all 0.3s;
+    }
+
+    .form-control-sm:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-properti-eksklusif {
+      background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(43, 88, 118, 0.3);
+    }
+
+    .btn-properti-eksklusif:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(43, 88, 118, 0.4);
+      color: white;
+    }
+
+    .property-item {
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .property-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .property-item img {
+      transition: transform 0.3s ease;
+    }
+
+    .property-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .rate i {
+      font-size: 0.9rem;
+      color: #ffd700;
+    }
+
+    .testimonial-card p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .stars {
+      color: #ffd700;
+      /* Warna emas */
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      /* Jarak antar bintang */
+    }
+
+    .stars i {
+      margin-right: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* Optional: Efek hover untuk bintang */
+    .stars:hover i {
+      transform: scale(1.1);
+      text-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+    }
+
+    .whatsapp-link {
+      background-color: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 60px;
+      height: 60px;
+      text-decoration: none;
+      position: absolute;
+    }
+
+    .whatsapp-link i {
+      font-size: 25px;
+      line-height: 1;
+      display: block;
+      width: 1em;
+      height: 1em;
+      margin: auto;
+      transform: translateZ(0);
+      /* Untuk optimalisasi rendering */
+    }
+
+    .whatsapp-link:hover {
+      background-color: #128C7E;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(18, 140, 126, 0.3);
+    }
+
+    /* Untuk memastikan tidak ada spacing ekstra */
+    .list-inline-item {
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
+
+    .property-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: white;
+      position: relative;
+    }
+
+    .property-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .property-image-container {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+
+    .property-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .property-card:hover .property-image {
+      transform: scale(1.05);
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .property-card:hover .image-overlay {
+      opacity: 0.9;
+    }
+
+    .property-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      z-index: 2;
+      animation: pulse 2s infinite;
+    }
+
+    .new-badge {
+      background: #2196F3;
+    }
+
+    .property-actions {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .property-card:hover .property-actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .action-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .action-btn:hover {
+      background: white;
+      color: #4CAF50;
+      transform: scale(1.1);
+    }
+
+    .heart-btn:hover {
+      color: #f44336;
+    }
+
+    .property-content {
+      padding: 20px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .price-trend {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .price-trend.up {
+      background: rgba(76, 175, 80, 0.1);
+      color: #4CAF50;
+    }
+
+    .price-trend.down {
+      background: rgba(244, 67, 54, 0.1);
+      color: #f44336;
+    }
+
+    .property-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+
+    .property-card:hover .property-title {
+      color: #4CAF50;
+    }
+
+    .location-text {
+      font-size: 14px;
+    }
+
+    .specs {
+      color: #7f8c8d;
+      font-size: 14px;
+    }
+
+    .view-details-btn {
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .view-details-btn:hover {
+      background: #388E3C;
+      transform: translateX(5px);
+    }
+
+    .property-rating {
+      color: #FFC107;
+      font-size: 14px;
+    }
+
+    .rating-text {
+      color: #7f8c8d;
+      margin-left: 5px;
+    }
+
+    .heading {
+      position: relative;
+      font-size: 32px;
+    }
+
+    .heading-decoration {
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #4CAF50, #8BC34A);
+      border-radius: 2px;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* AOS animations */
+    [data-aos="fade-up"] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    [data-aos="fade-up"].aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    [data-aos="fade-right"] {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.6s ease;
+    }
+
+    [data-aos="fade-right"].aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    [data-aos="fade-left"] {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.6s ease;
+    }
+
+    [data-aos="fade-left"].aos-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    [data-aos="fade"] {
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    [data-aos="fade"].aos-animate {
+      opacity: 1;
+    }
+
+    .sec-team {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .title-highlight {
+      position: relative;
+      display: inline-block;
+    }
+
+    .title-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, #4CAF50, #2196F3);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .heading:hover .title-highlight::after {
+      width: 100%;
+    }
+
+    .slider-nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    .slider-prev,
+    .slider-next {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid #e0e0e0;
+      color: #4CAF50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider-prev:hover,
+    .slider-next:hover {
+      background: #4CAF50;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .team-carousel {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .team-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .team-member {
+      flex: 0 0 calc(25% - 15px);
+      scroll-snap-align: start;
+      min-width: 220px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-image {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .member-image img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .member-card:hover .member-image img {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(76, 175, 80, 0.2) 0%, rgba(33, 150, 243, 0.2) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .member-card:hover .image-overlay {
+      opacity: 1;
+    }
+
+    .social-links {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .member-card:hover .social-links {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-icon.whatsapp {
+      background: #25D366;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .member-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .member-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .member-position {
+      color: #7f8c8d;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #25D366;
+      color: white;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .team-member {
+        flex: 0 0 calc(33.333% - 15px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .team-member {
+        flex: 0 0 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .team-member {
+        flex: 0 0 100%;
+      }
+    }
+
+    /* Animations */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    [data-aos="fade-up"] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    [data-aos="fade-up"].aos-animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .site-footer {
+      background: linear-gradient(135deg, #4caf50, #81c784, #c8e6c9, #a5d6a7);
+      color: #fff;
+      padding: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-footer .widget h3 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .site-footer .widget h3::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #fff;
+      margin-top: 5px;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .site-footer .widget h3:hover::after {
+      width: 100%;
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .site-footer a:hover {
+      color: #ffeb3b;
+    }
+
+    .site-footer .social li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .site-footer .social li a {
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .site-footer .social li a:hover {
+      transform: scale(1.2);
+    }
+
+    .site-footer p {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .slider-nav {
+      position: relative;
+      z-index: 10;
+    }
+
+    .btn-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(76, 175, 80, 0.1);
+      border: 1px solid #4CAF50;
+      color: #4CAF50;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-icon:hover {
+      background: #4CAF50;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* Slider Container */
+    .team-slider {
+      position: relative;
+      padding: 20px 0;
+    }
+
+    /* Slider Item */
+    .team-member {
+      padding: 0 15px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Slick Slider Adjustments */
+    .slick-list {
+      overflow: visible;
+      margin: 0 -15px;
+    }
+
+    .slick-slide {
+      opacity: 0.5;
+      transform: scale(0.95);
+      transition: all 0.3s ease;
+    }
+
+    .slick-center {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    /* // Logo & Tulisan PT // */
+    .logo {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .logo-img {
+      transition: transform 0.3s ease;
+      border-radius: 8px;
+      padding: 5px;
+      background: linear-gradient(45deg, #4CAF50, #81C784);
+    }
+
+    .logo-svg {
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover .logo-img {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    /* Teks Gradien */
+    .gradient-text {
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.5px;
+    }
+
+    .gradient-subtext {
+      background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+
+    /* Efek hover */
+    .logo:hover .gradient-text {
+      background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+    }
+
+    .logo:hover .gradient-subtext {
+      background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    }
+
+    /* Garis bawah animasi */
+    .logo::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      transition: width 0.3s ease;
+    }
+
+    .logo:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .logo-img {
+        height: 35px !important;
+      }
+
+      .gradient-text {
+        font-size: 1.2rem;
+      }
+
+      .gradient-subtext {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Teks Form */
+    .modern-heading {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
+      position: relative;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg,
+          #4CAF50 0%,
+          #00BCD4 25%,
+          #FFC107 50%,
+          #E91E63 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 300% 300%;
+      animation: gradient-shift 6s ease infinite;
+      display: block;
+      text-shadow: 0 4px 15px rgba(129, 212, 21, 0.2);
+    }
+
+    .heading-line {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 0.8rem;
+      transform: translateY(0);
+      animation: text-float 3s ease-in-out infinite;
+    }
+
+    .sub-heading {
+      display: inline-block;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      color: #ffffff;
+      position: relative;
+      font-weight: 400;
+      text-shadow: 0 2px 8px rgba(4, 124, 222, 0.3);
+    }
+
+    .animate-underline {
+      position: relative;
+      /* Ensure the pseudo-element is positioned correctly */
+      display: inline-block;
+      /* Allow the underline to wrap the text */
+    }
+
+    .animate-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      /* Ditambah tinggi garis */
+      background: linear-gradient(90deg,
+          #6a11cb 0%,
+          /* Ungu elektrik tua */
+          #2575fc 25%,
+          /* Biru elektrik */
+          #ff6b6b 50%,
+          /* Merah muda neon */
+          #7fff00 75%
+          /* Hijau neon */
+        );
+      transform: scaleX(0);
+      transform-origin: left;
+      animation:
+        underline-grow 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s,
+        blink 0.8s infinite alternate,
+        spark 1s ease-in-out infinite;
+      background-size: 200% 100%;
+      filter: blur(1px) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+    }
+
+    /* Animasi tambahan */
+    @keyframes blink {
+      0% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes spark {
+      0% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+      }
+
+      100% {
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    @keyframes underline-grow {
+      to {
+        transform: scaleX(1);
+        background-position: 100% 0;
+      }
+    }
+
+    /* Efek partikel percikan */
+    .animate-underline::before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      right: -10px;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #7fff00 20%, transparent 70%);
+      animation: spark-particle 1s infinite ease-out;
+      opacity: 0;
+    }
+
+    @keyframes spark-particle {
+      0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(100px, -50px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    .heading-line {
+      background: linear-gradient(90deg, #00BFFF, #FFD700);
+      /* Bright Blue to Gold */
+      background-clip: text;
+      /* Clip the background to the text */
+      -webkit-background-clip: text;
+      /* For Safari */
+      color: transparent;
+      /* Make the text color transparent */
+      font-weight: bold;
+      /* Make it bold */
+      display: inline-block;
+      /* Ensure it respects width */
+    }
+
+    /* heading */
+    .modern-heading {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heading-line {
+      display: block;
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      background: linear-gradient(45deg,
+          #FF007F 0%,
+          #00F7FF 25%,
+          #7D3CFF 50%,
+          #FFD700 75%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 300% 300%;
+      animation:
+        gradient-flow 5s ease infinite,
+        text-blink 0.8s infinite alternate,
+        sparkle 2s infinite;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      position: relative;
+      padding: 0 10px;
+    }
+
+    @keyframes gradient-flow {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    @keyframes text-blink {
+      0% {
+        opacity: 0.9;
+        filter: brightness(1);
+      }
+
+      100% {
+        opacity: 1;
+        filter: brightness(1.5);
+      }
+    }
+
+    @keyframes sparkle {
+      0% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      }
+
+      50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 15px #FF007F;
+      }
+
+      100% {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .sparkle-text::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #FFD700 20%, transparent 70%);
+      animation: spark 1s infinite ease-out;
+      opacity: 0;
+    }
+
+    .sparkle-text::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      background: radial-gradient(circle, #00F7FF 20%, transparent 70%);
+      animation: spark 1s infinite ease-out 0.5s;
+      opacity: 0;
+    }
+
+    @keyframes spark {
+      0% {
+        transform: scale(0) translate(0, 0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2) translate(30px, -30px);
+        opacity: 0;
+      }
+    }
+
+    /* Efek percikan api */
+    .sparkle-text {
+      position: relative;
+    }
+
+    .sparkle-text span {
+      position: absolute;
+      background: #FFD700;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fire 1s linear infinite;
+    }
+
+    @keyframes fire {
+      0% {
+        transform: translateY(0) scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .heading-line {
+        font-size: 2rem;
+      }
+    }
+
+    /* Tulisan Menu */
+    .site-menu li {
+      list-style: none;
+      /* Remove default list styling */
+      margin: 0 15px;
+      /* Space between menu items */
+    }
+
+    .site-menu a {
+      text-decoration: none;
+      /* Remove underline */
+      font-size: 1.1rem;
+      /* Adjust font size */
+      font-weight: 500;
+      /* Semi-bold text */
+      color: transparent;
+      /* Make text color transparent for gradient */
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      /* Green gradient */
+      background-clip: text;
+      /* Clip the background to the text */
+      -webkit-background-clip: text;
+      /* For Safari */
+      transition: transform 0.3s ease, color 0.3s ease;
+      /* Transition for smooth animations */
+    }
+
+    .site-menu a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      /* Thickness of the underline */
+      width: 0;
+      /* Initial width */
+      background: #fff;
+      /* Underline color */
+      transition: width 0.3s ease;
+      /* Transition for the underline */
+    }
+
+    .site-menu a:hover {
+      transform: scale(1.1);
+      /* Scale effect on hover */
+    }
+
+    .site-menu a:hover::after {
+      width: 100%;
+      /* Expand underline on hover */
+    }
+
+    /* daun emoji */
+    .leaf-emoji {
+      display: inline-block;
+      /* Allows for positioning */
+      font-size: 1.5rem;
+      /* Adjust size as needed */
+      color: #00FF00;
+      /* Bright green color */
+      text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.5);
+      /* Glowing effect */
+      animation: twinkle 1.5s infinite;
+      /* Twinkling animation */
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        transform: scale(1);
+        /* Original size */
+      }
+
+      50% {
+        transform: scale(1.2);
+        /* Slightly enlarge */
+        opacity: 0.8;
+        /* Slightly fade */
+      }
+    }
+
+    .star {
+      position: relative;
+    }
+
+    .star::after {
+      content: '⭐';
+      /* Star emoji */
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      /* Adjust position */
+      font-size: 1.2rem;
+      /* Size of the star */
+      animation: sparkle 1.5s infinite;
+      /* Sparkle effect */
+    }
+
+    @keyframes sparkle {
+
+      0%,
+      100% {
+        opacity: 0.8;
+        /* Original opacity */
+      }
+
+      50% {
+        opacity: 1;
+        /* Max opacity */
+      }
+    }
+
+    .leaf-emoji {
+      display: inline-block;
+      position: relative;
+      animation: leaf-flicker 2.5s infinite alternate ease-in-out;
+      transform-origin: center;
+    }
+
+    /* Animasi utama daun */
+    @keyframes leaf-flicker {
+      0% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) drop-shadow(0 0 5px rgba(0, 200, 83, 0.5));
+      }
+
+      30% {
+        transform: scale(1.15) rotate(-3deg);
+        filter: brightness(1.3) drop-shadow(0 0 12px rgba(76, 175, 80, 0.8));
+      }
+
+      70% {
+        transform: scale(1.1) rotate(2deg);
+        filter: brightness(1.2) drop-shadow(0 0 10px rgba(100, 221, 23, 0.7));
+      }
+
+      100% {
+        transform: scale(1.2) rotate(-4deg);
+        filter: brightness(1.4) drop-shadow(0 0 15px rgba(0, 255, 128, 0.9));
+      }
+    }
+
+    /* Partikel bintang */
+    .leaf-emoji::before,
+    .leaf-emoji::after,
+    .leaf-emoji .star {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #4caf50,
+        0 0 30px #8bc34a;
+    }
+
+    /* Posisi partikel */
+    .leaf-emoji::before {
+      top: -15px;
+      left: -5px;
+      animation: star-spark 2s infinite 0.5s;
+    }
+
+    .leaf-emoji::after {
+      top: -10px;
+      right: -8px;
+      animation: star-spark 2s infinite 1.5s;
+    }
+
+    /* Partikel tambahan (jika ingin lebih banyak) */
+    .leaf-emoji .star {
+      display: block;
+      top: 5px;
+      left: 50%;
+      animation: star-spark 2s infinite 0.8s;
+    }
+
+    /* Animasi percikan bintang */
+    @keyframes star-spark {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translate(5px, -10px) scale(1);
+      }
+
+      40% {
+        opacity: 1;
+        transform: translate(-5px, -20px) scale(0.8);
+        box-shadow:
+          0 0 15px #ffffff,
+          0 0 25px #4caf50,
+          0 0 35px #8bc34a;
+      }
+
+      60% {
+        opacity: 0.5;
+        transform: translate(10px, -30px) scale(0.5);
+      }
+
+      80%,
+      100% {
+        opacity: 0;
+        transform: translate(0, -40px) scale(0);
+      }
+    }
+
+    /* Efek hover tambahan */
+    .leaf-emoji:hover {
+      animation-duration: 1.2s;
+    }
+
+
+    /* api emoji */
+    .fire-emoji {
+      display: inline-block;
+      /* Allows for positioning */
+      font-size: 1.5rem;
+      /* Adjust size as needed */
+      background: linear-gradient(90deg, #FFD700, #FF4500);
+      /* Yellow to Orange gradient */
+      -webkit-background-clip: text;
+      /* Clip background to text */
+      background-clip: text;
+      /* For compatibility */
+      color: transparent;
+      /* Make text color transparent */
+      animation: twinkle 1.5s infinite;
+      /* Twinkling animation */
+      position: relative;
+      /* For spark effect positioning */
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        transform: scale(1);
+        /* Original size */
+      }
+
+      50% {
+        transform: scale(1.2);
+        /* Slightly enlarge */
+        opacity: 0.8;
+        /* Slightly fade */
+      }
+    }
+
+    .fire-emoji::after {
+      content: '✨';
+      /* Sparkle emoji */
+      position: absolute;
+      top: 0;
+      left: 20px;
+      /* Adjust position */
+      animation: sparkle 1.5s infinite;
+      /* Sparkle effect */
+      font-size: 1rem;
+      /* Size of the sparkle */
+    }
+
+    @keyframes sparkle {
+
+      0%,
+      100% {
+        opacity: 0;
+        /* Hidden */
+      }
+
+      50% {
+        opacity: 1;
+        /* Visible at midpoint */
+      }
+    }
+
+    .fire-emoji {
+      display: inline-block;
+      position: relative;
+      animation: flicker 0.8s infinite alternate;
+    }
+
+    /* Animasi utama kelap-kelip */
+    @keyframes flicker {
+
+      0%,
+      100% {
+        transform: scale(1);
+        filter: brightness(1) drop-shadow(0 0 5px rgba(255, 80, 0, 0.7));
+      }
+
+      25% {
+        transform: scale(1.1) rotate(5deg);
+        filter: brightness(1.3) drop-shadow(0 0 15px rgba(255, 60, 0, 0.9));
+      }
+
+      50% {
+        transform: scale(0.95) rotate(-5deg);
+        filter: brightness(0.9) drop-shadow(0 0 8px rgba(255, 40, 0, 0.6));
+      }
+
+      75% {
+        transform: scale(1.15) rotate(3deg);
+        filter: brightness(1.4) drop-shadow(0 0 20px rgba(255, 100, 0, 1));
+      }
+    }
+
+    /* Partikel percikan api */
+    .fire-emoji::before,
+    .fire-emoji::after {
+      content: "✦";
+      position: absolute;
+      font-size: 0.5em;
+      opacity: 0;
+      animation: spark 1.2s infinite;
+    }
+
+    .fire-emoji::before {
+      top: -15px;
+      left: -5px;
+      color: #FFD700;
+      animation-delay: 0.3s;
+    }
+
+    .fire-emoji::after {
+      top: -10px;
+      right: -8px;
+      color: #FF4500;
+      animation-delay: 0.7s;
+    }
+
+    /* Animasi percikan */
+    @keyframes spark {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+      }
+
+      30% {
+        opacity: 1;
+        transform: translateY(-15px) translateX(5px) scale(1);
+        filter: drop-shadow(0 0 5px currentColor);
+      }
+
+      70% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-30px) translateX(15px) scale(0.2);
+        filter: drop-shadow(0 0 10px currentColor);
+      }
+    }
+
+    /* Tambahan efek untuk hover (opsional) */
+    .fire-emoji:hover {
+      animation: flicker 0.3s infinite alternate;
+    }
+  </style>
+
+  <title>
+    Property &mdash; PT. BOROBUDUR BUMI MANDIRI
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  </title>
+</head>
+
+<body>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="menu-bg-wrap">
+        <div class="site-navigation">
+          <a href="index.html" class="logo m-0 float-start d-flex align-items-center">
+            <!-- Logo dengan efek hover -->
+            <div class="logo-container me-3">
+              <!-- Versi 1: Logo dengan gambar -->
+              <img src="images/logo_bbm.png" alt="Logo BBM" class="logo-img" style="height: 40px; width: auto;">
+
+              <!-- Versi 2: Logo dengan SVG (alternatif jika tidak ada gambar) -->
+              <!--
+                          <svg class="logo-svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                              <path d="M20 0C8.96 0 0 8.96 0 20C0 31.04 8.96 40 20 40C31.04 40 40 31.04 40 20C40 8.96 31.04 0 20 0ZM28 28H12V12H28V28Z" 
+                                    fill="#4CAF50"/>
+                              <path d="M15 15H25V25H15V15Z" fill="#ffffff"/>
+                          </svg>
+                          -->
+            </div>
+
+            <!-- Teks dengan efek gradien -->
+            <span class="logo-text">
+              <span class="gradient-text">BOROBUDUR PROPERTY</span>
+              
+            </span>
+          </a>
+          <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <a href="#"
+            class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+            data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br><br><br>
+  <br><br><br>
+  <div class="hero">
+    <div class="hero-slide">
+      <div class="img overlay" style="background-image: url('images/Landmar L 2.jpg')"></div>
+      <div class="img overlay" style="background-image: url('images/IMG_3404.JPG')"></div>
+      <div class="img overlay" style="background-image: url('images/IMG_yo.jpg')"></div>
+    </div>
+    <br><br><br>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-4">
+            <h1 class="modern-heading" data-aos="fade-up" data-aos-delay="200">
+              <span class="gradient-text animate-gradient">
+                <span class="heading-line">Cara Termudah Untuk</span>
+                <span class="heading-line">Temukan Rumah Impian Anda</span>
+              </span>
+              <span class="sub-heading animate-underline">Silahkan isi form dibawah ini!</span>
+            </h1>
+          </div>
+          <div class="form-modern" data-aos="fade-up" data-aos-delay="100">
+            <form method="POST" action="env.php">
+              <div class="row g-3 justify-content-center">
+                <div class="col-lg-6">
+                  <div class="input-group input-group-smart mb-4">
+                    <span class="input-icon"><i class="fas fa-user"></i></span>
+                    <input type="text" name="name" class="form-control form-control-sm" placeholder="Nama Lengkap"
+                      required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="input-group input-group-smart mb-4">
+                    <span class="input-icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="email" class="form-control form-control-sm" placeholder="Alamat Email"
+                      required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="input-group input-group-smart mb-4">
+                    <span class="input-icon"><i class="fab fa-whatsapp"></i></span>
+                    <input type="tel" name="whatsapp" class="form-control form-control-sm" placeholder="Nomor WhatsApp"
+                      pattern="[0-9]{10,13}" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-3">
+                <button type="submit" class="btn btn-gradient method=" POST" action="env.php">
+                  <i class="fas fa-download mr-2"></i>
+                  Dapatkan Brosur Sekarang
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row mb-5 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="font-weight-bold text-primary heading" data-aos="fade-right" data-aos-duration="800">
+            <span class="d-inline-block position-relative">Popular Properties<span
+                class="heading-decoration"></span></span>
+          </h2>
+        </div>
+        <div class="col-lg-6 text-lg-end">
+          <p class="mb-0">
+            <a href="properties.html" class="btn btn-properti-eksklusif" data-aos="fade-left" data-aos-delay="200">
+              <i class="fas fa-search-location me-2"></i>
+              Lihat semua Fasilitas
+              <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Property 1 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="property-card modern-card h-100">
+            <div class="property-image-container">
+              <a href="property-single.html" class="img">
+                <img src="images/tes 1-01.jpg" alt="The Green Lando 2" class="img-fluid property-image" />
+                <div class="image-overlay"></div>
+                <div class="property-badge">HOT OFFER</div>
+                <div class="property-actions">
+                  <button class="action-btn heart-btn"><i class="far fa-heart"></i></button>
+                  <button class="action-btn share-btn"><i class="fas fa-share-alt"></i></button>
+                </div>
+              </a>
+            </div>
+
+            <div class="property-content">
+              <div class="price mb-2" data-aos="fade" data-aos-delay="300">
+                <span>Rp. 173.000.000</span>
+                <div class="price-trend up"><i class="fas fa-arrow-up"></i> 5.2%</div>
+              </div>
+              <div class="property-details">
+                <span class="d-block mb-2 text-muted location-text">
+                  <i class="fas fa-map-marker-alt me-1"></i> Kalukubula, Kec. Sigi Biromaru, Kabupaten
+                  Sigi, Sulawesi
+                  Tengah
+                </span>
+                <h3 class="property-title mb-3">
+                  The Green Lando 2
+                  <span class="leaf-emoji">🍃</span>
+                </h3>
+                
+                <div class="specs d-flex mb-4">
+                  <span class="d-block d-flex align-items-center me-3"><i class="fas fa-home me-2"></i><span
+                      class="caption">Tipe 36</span></span>
+                  <span class="d-block d-flex align-items-center me-3"><i class="fas fa-bed me-2"></i><span
+                      class="caption">2 Kamar
+                      Tidur</span></span>
+                  <span class="d-block d-flex align-items-center me-3"><i class="fas fa-bath me-2"></i><span
+                      class="caption">1 Toilet</span></span>
+                  <span class="d-block d-flex align-items-center"><i class="fas fa-ruler-combined me-2"></i><span
+                      class="caption">104m²</span></span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="property-single.html" class="btn btn-primary py-2 px-3 view-details-btn">Lihat Detailnya<i
+                      class="fas fa-arrow-right ms-2"></i></a>
+                  <div class="property-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span class="rating-text">4.7</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="property-card modern-card h-100">
+            <a href="property-gpk.html" class="card-link">
+              <div class="property-image-container">
+                <div class="img">
+                  <img src="images/gpkbr-01.jpg" alt="Green Pesona Kalukubula" class="img-fluid property-image" />
+                  <div class="image-overlay"></div>
+                  <div class="property-badge new-badge">NEW</div>
+                  <div class="property-actions">
+                    <button type="button" class="action-btn heart-btn"><i class="far fa-heart"></i></button>
+                    <button type="button" class="action-btn share-btn"><i class="fas fa-share-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="property-content">
+                <div class="price mb-2" data-aos="fade" data-aos-delay="400">
+                  <span>Rp. 173.000.000</span>
+                  <div class="price-trend up"><i class="fas fa-arrow-up"></i> 5.2%</div>
+                </div>
+                <div class="property-details">
+                  <span class="d-block mb-2 text-muted location-text">
+                    <i class="fas fa-map-marker-alt me-1"></i> Kalukubula, Kec. Sigi Biromaru,
+                    Kabupaten Sigi,
+                    Sulawesi
+                    Tengah
+                  </span>
+                  <h3 class="property-title mb-3">
+                    Green Pesona Kalukubula
+                    <span class="fire-emoji">🔥</span>
+                  </h3>
+                  <div class="specs d-flex mb-4">
+                    <span class="d-block d-flex align-items-center me-3"><i class="fas fa-home me-2"></i><span
+                        class="caption">Tipe 36</span></span>
+                    <span class="d-block d-flex align-items-center me-3"><i class="fas fa-bed me-2"></i><span
+                        class="caption">2
+                        Kamar Tidur</span></span>
+                    <span class="d-block d-flex align-items-center me-3"><i class="fas fa-bath me-2"></i><span
+                        class="caption">1
+                        Toilet</span></span>
+                    <span class="d-block d-flex align-items-center"><i class="fas fa-ruler-combined me-2"></i><span
+                        class="caption">104m²</span></span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="btn btn-primary py-2 px-3 view-details-btn">Lihat Detailnya<i
+                        class="fas fa-arrow-right ms-2"></i></span>
+                    <div class="property-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span class="rating-text">4.0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="property-nav" class="controls" tabindex="0" aria-label="Carousel Navigation">
+          <span class="prev" data-controls="prev" aria-controls="property" tabindex="-1">Prev</span>
+          <span class="next" data-controls="next" aria-controls="property" tabindex="-1">Next</span>
+        </div>
+      </div>
+
+      <section class="features-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="box-feature">
+                <span class="flaticon-house"></span>
+                <h3 class="mb-3">Amanah</h3>
+                <p>Transaksi yang jujur dan transparan. Kepercayaan Anda adalah prioritas kami.</p>
+                <p><a class="learn-more">PT. BOROBUDUR BUMI MANDIRI</a></p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+              <div class="box-feature">
+                <span class="flaticon-building"></span>
+                <h3 class="mb-3">Kualitas</h3>
+                <p>Kami menawarkan properti berkualitas tinggi, memastikan investasi Anda aman dan
+                  nyaman.</p>
+                <p><a class="learn-more">PT. BOROBUDUR BUMI MANDIRI</a></p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="box-feature">
+                <span class="flaticon-house-3"></span>
+                <h3 class="mb-3">Terpercaya</h3>
+                <p>Reputasi solid di industri. Klien puas adalah bukti kualitas layanan kami.</p>
+                <p><a class="learn-more">PT. BOROBUDUR BUMI MANDIRI</a></p>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+              <div class="box-feature">
+                <span class="flaticon-house-1"></span>
+                <h3 class="mb-3">Indah</h3>
+                <p>Rumah yang dirancang dengan indah dan nyaman, sempurna untuk keluarga Anda.</p>
+                <p><a class="learn-more">PT. BOROBUDUR BUMI MANDIRI</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section sec-team py-5 bg-light">
+        <div class="container">
+          <div class="row mb-5 align-items-center" data-aos="fade-up">
+            <div class="col-md-6">
+              <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
+                <span class="title-highlight">Agen Marketing Kami</span>
+              </h2>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <div class="slider-nav d-inline-flex align-items-center gap-2">
+              </div>
+            </div>
+          </div>
+
+          <div class="team-carousel">
+            <!-- Agent 1 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Zain.png" alt="Zainudin" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6282156240739" target="_blank" class="social-icon whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Zainudin</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6282156240739" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent 2 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="150">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Adel.jpg" alt="Adelya" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6285159778728" target="_blank" class="social-icon whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Adelya</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6285159778728" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent 3 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Amin.jpg" alt="Burtamin" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6282293159993" target="_blank" class="social-icon whatsapp"><i
+                        class="fab fa-whatsapp"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Burtamin</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6282293159993" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additional Agents -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="250">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Aldi.jpg" alt="Arifaldi" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6282339477107" target="_blank" class="social-icon whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Arifaldi</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6282339477107" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent 5 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Dayat.jpg" alt="Dayat" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6281340212699" target="_blank" class="social-icon whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Dayat</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6281340212699" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-member" data-aos="fade-up" data-aos-delay="350">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Doni.jpg" alt="Doni" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6282346811619" target="_blank" class="social-icon whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Doni</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6282346811619" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Agent 7 -->
+            <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-card">
+                <div class="member-image">
+                  <img src="images/Endang.jpg" alt="Endang" class="img-fluid" />
+                  <div class="image-overlay"></div>
+                  <div class="social-links">
+                    <a href="https://wa.me/6285705799032" target="_blank" class="social-icon whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h3 class="member-name">Endang</h3>
+                  <p class="member-position">Tim Marketing</p>
+                  <a href="https://wa.me/6285705799032" target="_blank" class="contact-btn">
+                    <i class="fab fa-whatsapp"></i> Hubungi
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <br><br><br>
+
+      <div class="section section-4 bg-light">
+        <div class="container">
+          <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-5">
+              <h2 class="font-weight-bold heading text-primary mb-4">
+                Mari temukan rumah yang cocok untuk Anda
+              </h2>
+              <p class="text-black-50">
+                "Temukan rumah impian Anda bersama kami, PT. BOROBUDUR BUMI MANDIRI, yang telah
+                terpercaya dan
+                berkomitmen untuk memberikan pelayanan terbaik serta hunian berkualitas dan amanah untuk
+                setiap
+                pelanggan."
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-between mb-5">
+            <div class="col-lg-7 mb-5 mb-lg-0 order-lg-2">
+              <div class="img-about dots">
+                <img src="images/pgw.jpg" alt="Image" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="d-flex feature-h">
+                <span class="wrap-icon me-3">
+                  <span class="icon-home2"></span>
+                </span>
+                <div class="feature-text">
+                  <h3 class="heading">PT. BOROBUDUR BUMI MANDIRI</h3>
+                  <p class="text-black-50">
+                    Perusahaan properti terpercaya untuk rumah impian Anda.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex feature-h">
+                <span class="wrap-icon me-3">
+                  <span class="icon-person"></span>
+                </span>
+                <div class="feature-text">
+                  <h3 class="heading">Agen Berperingkat Teratas</h3>
+                  <p class="text-black-50">
+                    Agen terkemuka dengan layanan profesional dan hasil unggul.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex feature-h">
+                <span class="wrap-icon me-3">
+                  <span class="icon-security"></span>
+                </span>
+                <div class="feature-text">
+                  <h3 class="heading">Properti Sah</h3>
+                  <p class="text-black-50">
+                    Properti terjamin sah, memberikan ketenangan berinvestasi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row section-counter mt-5">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="counter-wrap mb-5 mb-lg-0">
+                <span class="number"><span class="countup text-primary">1558</span></span>
+                <span class="caption text-black-50"># Jumlah Property</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="counter-wrap mb-5 mb-lg-0">
+                <span class="number"><span class="countup text-primary">1488</span></span>
+                <span class="caption text-black-50"># Property Terjual</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+              <div class="counter-wrap mb-5 mb-lg-0">
+                <span class="number"><span class="countup text-primary">1535</span></span>
+                <span class="caption text-black-50"># Up Coming</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+              <div class="counter-wrap mb-5 mb-lg-0">
+                <span class="number"><span class="countup text-primary">35</span></span>
+                <span class="caption text-black-50"># Agen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="row justify-content-center footer-cta" data-aos="fade-up">
+          <div class="col-lg-7 mx-auto text-center">
+            <h2 class="mb-4">"Siap memulai perjalanan menuju rumah impian Anda? Temukan properti terbaik
+              yang sempurna
+              untuk
+              gaya hidup Anda!"</h2>
+            <p>
+              <a href="https://wa.me/6282299986190" target="_blank" class="btn btn-primary text-white py-3 px-4">Layanan
+                Konsultasi Gratis untuk
+                Anda</a>
+            </p>
+          </div>
+          <!-- /.col-lg-7 -->
+        </div>
+        <!-- /.row -->
+      </div>
+
+      <!-- TESTIMONIALS -->
+
+      <div class="section sec-testimonials py-5">
+        <div class="container">
+          <div class="row mb-5 align-items-center">
+            <div class="col-12 text-center">
+              <h2 class="display-5 fw-bold text-primary mb-4">Apa Kata Klien Kami?</h2>
+            </div>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Testimonial 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card h-100 p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img src="images/ai6.png" alt="Image" class="img-fluid rounded-circle me-3"
+                    style="width: 80px; height: 80px; object-fit: cover;">
+                  <div>
+                    <h4 class="h5 text-primary mb-1">Budi Santoso</h4>
+                    <p class="text-muted small mb-0">Petani</p>
+                    <div class="rate text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <blockquote class="mb-0">
+                  <p class="text-muted">
+                    "Saya sangat puas dengan pengalaman membeli rumah di [PT. Borobudur Bumi
+                    Mandiri]. Prosesnya cepat
+                    dan
+                    timnya sangat profesional. Lingkungan perumahan yang nyaman!"
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card h-100 p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img src="images/ai7.png" alt="Image" class="img-fluid rounded-circle me-3"
+                    style="width: 80px; height: 80px; object-fit: cover;">
+                  <div>
+                    <h4 class="h5 text-primary mb-1">Anna Prasetyo</h4>
+                    <p class="text-muted small mb-0">Pegawai Negeri</p>
+                    <div class="rate text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <blockquote class="mb-0">
+                  <p class="text-muted">
+                    “Pengalaman luar biasa! Rumah subsidi dengan fasilitas lengkap. Layanan purna
+                    jualnya sangat
+                    memuaskan.
+                    Sangat merekomendasikan [PT. Borobudur Bumi Mandiri]!”
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="testimonial-card h-100 p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img src="images/ai8.png" alt="Image" class="img-fluid rounded-circle me-3"
+                    style="width: 80px; height: 80px; object-fit: cover;">
+                  <div>
+                    <h4 class="h5 text-primary mb-1">Sutoyo</h4>
+                    <p class="text-muted small mb-0">Guru</p>
+                    <div class="rate text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <blockquote class="mb-0">
+                  <p class="text-muted">
+                    "Rumah terjangkau dan berkualitas! Lokasi strategis dan tim penjual yang ramah
+                    membantu di setiap
+                    langkah. Kami sangat merekomendasikan!"
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- END TEST -->
+
+    <div class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Contact</h3>
+              <address>Jl. Karanja Lembah No.16, Kalukubula, Kec. Sigi Biromaru, Kabupaten Sigi, Sulawesi
+                Tengah
+              </address>
+              <ul class="list-unstyled links">
+                <li><a href="tel://081298681480">(+62)81298681480</a></li>
+                <li><a href="tel://082299986190">(+62)82299986190</a></li>
+                <li><a href="mailto:borobudurproperty6@gmail.com">borobudurproperty6@gmail.com</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Sources</h3>
+              <ul class="list-unstyled float-start links">
+                <li><a href="about.html">About us</a></li>
+                <li><a href="about.html">Layanan</a></li>
+                <li><a href="about.html">Vision</a></li>
+                <li><a href="about.html">Mission</a></li>
+                <li><a href="about.html">Terms</a></li>
+                <li><a href="about.html">Privacy</a></li>
+              </ul>
+              <ul class="list-unstyled float-start links">
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Creative</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3>Links</h3>
+              <ul class="list-unstyled links">
+                <li><a href="about.html">Our Vision</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+              <ul class="list-unstyled social">
+                <li><a href="https://www.instagram.com/borobudur_property/"><span class="icon-instagram"></span></a>
+                </li>
+                <li><a href="https://www.facebook.com/mohrizal.h"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://wa.me/6281298681480"><span class="icon-whatsapp"></span></a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p>
+              Hak Cipta &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . Semua Hak Dilindungi Undang-Undang. &mdash; Dirancang Oleh
+              <a href="https://untree.co">Hans</a>
+            </p>
+            <div>
+              Didistribusikan oleh
+              <a href="https://themewagon.com/" target="_blank">PT. BOROBUDUR BUMI MANDIRI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+      document.querySelector('.btn-properti-eksklusif').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'properties.html';
+      });
+    </script>
+
+
+    <!-- Include AOS library for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS animation library
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+
+      // Add hover effect to property cards
+      document.querySelectorAll('.property-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.querySelector('.property-image').style.transform = 'scale(1.05)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.querySelector('.property-image').style.transform = 'scale(1)';
+        });
+      });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.team-carousel').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: $('.slider-prev'),
+          nextArrow: $('.slider-next'),
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+
+        // Initialize AOS animation
+        AOS.init({
+          duration: 800,
+          once: true
+        });
+      });
+    </script>
+
+    <script>
+      // Initialize Slick Slider with proper configuration
+      $(document).ready(function () {
+        $('.team-slider').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: $('.slider-prev'),
+          nextArrow: $('.slider-next'),
+          centerMode: true,
+          focusOnSelect: true,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                centerMode: false
+              }
+            }
+          ]
+        });
+
+        // Add hover effect
+        $('.team-member').hover(
+          function () {
+            $(this).addClass('hover');
+          },
+          function () {
+            $(this).removeClass('hover');
+          }
+        );
+      });
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.team-carousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: '<button class="slider-prev btn btn-icon" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow: '<button class="slider-next btn btn-icon" aria-label="Next"><i class="fas fa-chevron-right"></i></button>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('.sparkle-text').forEach(text => {
+        for (let i = 0; i < 5; i++) {
+          const spark = document.createElement('span');
+          spark.style.position = 'absolute'; // Ensure spark is positioned absolutely
+          spark.style.width = '5px'; // Adjust width
+          spark.style.height = '5px'; // Adjust height
+          spark.style.backgroundColor = 'white'; // Spark color
+          spark.style.borderRadius = '50%'; // Make it circular
+          spark.style.left = Math.random() * 100 + '%';
+          spark.style.animationDelay = Math.random() * 1 + 's';
+          text.appendChild(spark);
+        }
+      });
+    </script>
+</body>
+
+</html>
