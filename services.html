@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Untree.co" />
+  <link rel="shortcut icon" href="bbm.png" />
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap5" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+  <link rel="stylesheet" href="css/tiny-slider.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: filter 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      filter: brightness(0.8);
+    }
+
+
+    .site-footer {
+      background: linear-gradient(135deg, #4caf50, #81c784, #c8e6c9, #a5d6a7);
+      color: #fff;
+      padding: 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-footer .widget h3 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .site-footer .widget h3::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #fff;
+      margin-top: 5px;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .site-footer .widget h3:hover::after {
+      width: 100%;
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .site-footer a:hover {
+      color: #ffeb3b;
+    }
+
+    .site-footer .social li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .site-footer .social li a {
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .site-footer .social li a:hover {
+      transform: scale(1.2);
+    }
+
+    .site-footer p {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Tulisan Menu */
+    .site-menu li {
+      list-style: none;
+      /* Remove default list styling */
+      margin: 0 15px;
+      /* Space between menu items */
+    }
+
+    .site-menu a {
+      text-decoration: none;
+      /* Remove underline */
+      font-size: 1.1rem;
+      /* Adjust font size */
+      font-weight: 500;
+      /* Semi-bold text */
+      color: transparent;
+      /* Make text color transparent for gradient */
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      /* Green gradient */
+      background-clip: text;
+      /* Clip the background to the text */
+      -webkit-background-clip: text;
+      /* For Safari */
+      transition: transform 0.3s ease, color 0.3s ease;
+      /* Transition for smooth animations */
+    }
+
+    .site-menu a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      /* Thickness of the underline */
+      width: 0;
+      /* Initial width */
+      background: #fff;
+      /* Underline color */
+      transition: width 0.3s ease;
+      /* Transition for the underline */
+    }
+
+    .site-menu a:hover {
+      transform: scale(1.1);
+      /* Scale effect on hover */
+    }
+
+    .site-menu a:hover::after {
+      width: 100%;
+      /* Expand underline on hover */
+    }
+
+    /* Tulisan Menu */
+    .site-menu li {
+      list-style: none;
+      /* Remove default list styling */
+      margin: 0 15px;
+      /* Space between menu items */
+    }
+
+    .site-menu a {
+      text-decoration: none;
+      /* Remove underline */
+      font-size: 1.1rem;
+      /* Adjust font size */
+      font-weight: 500;
+      /* Semi-bold text */
+      color: transparent;
+      /* Make text color transparent for gradient */
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      /* Green gradient */
+      background-clip: text;
+      /* Clip the background to the text */
+      -webkit-background-clip: text;
+      /* For Safari */
+      transition: transform 0.3s ease, color 0.3s ease;
+      /* Transition for smooth animations */
+    }
+
+    .site-menu a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      /* Thickness of the underline */
+      width: 0;
+      /* Initial width */
+      background: #fff;
+      /* Underline color */
+      transition: width 0.3s ease;
+      /* Transition for the underline */
+    }
+
+    .site-menu a:hover {
+      transform: scale(1.1);
+      /* Scale effect on hover */
+    }
+
+    .site-menu a:hover::after {
+      width: 100%;
+      /* Expand underline on hover */
+    }
+
+    /* Tulisan ACH */
+    .modern-title {
+      position: relative;
+      display: inline-block;
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .fire-text {
+      background: linear-gradient(45deg,
+          #FF512F 0%,
+          #F09819 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation:
+        fire-blink 0.8s infinite alternate,
+        flame-glow 1.5s infinite ease-in-out;
+      position: relative;
+      text-shadow: 0 0 20px rgba(255, 81, 47, 0.3);
+    }
+
+    /* Animasi kedip */
+    @keyframes fire-blink {
+      0% {
+        opacity: 0.9;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Animasi kobaran api */
+    @keyframes flame-glow {
+
+      0%,
+      100% {
+        text-shadow:
+          0 0 10px #FF512F,
+          0 0 20px #F09819,
+          0 0 30px #FF512F;
+      }
+
+      50% {
+        text-shadow:
+          0 0 20px #FF512F,
+          0 0 40px #F09819,
+          0 0 60px #FF512F;
+      }
+    }
+
+    /* Efik partikel api */
+    .fire-text::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle,
+          rgba(255, 81, 47, 0.3) 0%,
+          transparent 70%);
+      animation: flame-spread 1s infinite linear;
+      z-index: -1;
+    }
+
+    @keyframes flame-spread {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    /* Efek percikan api */
+    .fire-text::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3px;
+      height: 3px;
+      background: #FFD700;
+      border-radius: 50%;
+      animation:
+        spark 1s infinite linear,
+        spark-move 2s infinite linear;
+    }
+
+    @keyframes spark {
+      0% {
+        box-shadow: 0 0 5px #FFD700;
+      }
+
+      50% {
+        box-shadow: 0 0 15px #FFD700;
+      }
+
+      100% {
+        box-shadow: 0 0 5px #FFD700;
+      }
+    }
+
+    @keyframes spark-move {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(0);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .modern-title {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+
+  <title>
+    Property &mdash; The Green Lando
+  </title>
+</head>
+
+<body>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="menu-bg-wrap">
+        <div class="site-navigation">
+          <a href="index.html" class="logo m-0 float-start">Gallery</a>
+
+          <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <a href="#"
+            class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+            data-toggle="collapse" data-target="#main-navbar">
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero page-inner overlay" style="background-image: url('images/hero_bg_1.jpg')">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-9 text-center mt-5">
+          <h1 class="heading" data-aos="fade-up">Gallery</h1>
+
+          <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
+            <ol class="breadcrumb text-center justify-content-center">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active text-white-50" aria-current="page">
+                Gallery
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section bg-light">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="modern-title" data-aos="zoom-in">
+            <span class="fire-text">ACHIEVEMENT</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gambar Pertama -->
+  <div class="row mb-4">
+    <div class="col-12" data-aos="zoom-in" data-aos-delay="300">
+      <div class="gallery-item text-center">
+        <img src="images/REI AWARD-01.jpg" alt="Penghargaan 1" class="img-fluid gallery-image" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Galeri Gambar Lainnya -->
+  <div class="row">
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+      <div class="gallery-item">
+        <img src="images/Achieveen dari BTN S.jpg" alt="Penghargaan 2" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+      <div class="gallery-item">
+        <img src="images/01btn.jpg" alt="Penghargaan 3" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/Hunian tertinggi oleh BP Tapera.jpg" alt="Penghargaan 4" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="gallery-item">
+        <img src="images/Achieveen dari BTN S-01.jpg" alt="Penghargaan 5" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+      <div class="gallery-item">
+        <img src="images/s2.jpg" alt="Penghargaan 6" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+      <div class="gallery-item">
+        <img src="images/s3.jpg" alt="Penghargaan 7" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s4.jpg" alt="Penghargaan 8" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s6.jpg" alt="Penghargaan 9" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s1.jpg" alt="Penghargaan 10" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s5.jpg" alt="Penghargaan 11" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s7.jpg" alt="Penghargaan 12" class="img-fluid gallery-image" />
+      </div>
+    </div>
+    <div class="col-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="gallery-item">
+        <img src="images/s9.jpg" alt="Penghargaan 13" class="img-fluid gallery-image" />
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="section sec-testimonials">
+    <div class="container">
+      <div class="row mb-5 align-items-center">
+        <div class="col-md-6">
+          <h2 class="font-weight-bold heading text-primary mb-4 mb-md-0">
+            Testimonial
+          </h2>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div id="testimonial-nav">
+            <span class="prev" data-controls="prev">Prev</span>
+            <span class="next" data-controls="next">Next</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4"></div>
+      </div>
+      <div class="testimonial-slider-wrap">
+        <div class="testimonial-slider">
+          <div class="item">
+            <div class="testimonial">
+              <img src="images/ai2.png" alt="Image" class="img-fluid rounded-circle w-25 mb-4" />
+              <div class="rate">
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+              </div>
+              <h3 class="h5 text-primary mb-4">Andi Prasetyo</h3>
+              <blockquote>
+                <p>
+                  &ldquo;Pengalaman saya bertransaksi dengan PT. BOROBUDUR BUMI MANDIRI sangat memuaskan! Tim mereka
+                  sangat profesional dan selalu siap membantu. Saya merasa sangat diperhatikan dan akhirnya menemukan
+                  properti impian saya.&rdquo;
+                </p>
+              </blockquote>
+              <p class="text-black-50">Pelanggan Puas</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimonial">
+              <img src="images/ai1.png" alt="Image" class="img-fluid rounded-circle w-25 mb-4" />
+              <div class="rate">
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+              </div>
+              <h3 class="h5 text-primary mb-4">Siti Nurhaliza</h3>
+              <blockquote>
+                <p>
+                  &ldquo;Saya sangat merekomendasikan PT. BOROBUDUR BUMI MANDIRI! Mereka memberikan layanan yang luar
+                  biasa dan membantu saya menemukan rumah yang tepat dengan harga yang sesuai. Sangat puas dengan
+                  pengalaman saya!&rdquo;
+                </p>
+              </blockquote>
+              <p class="text-black-50">Investor Properti</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimonial">
+              <img src="images/ai3.png" alt="Image" class="img-fluid rounded-circle w-25 mb-4" />
+              <div class="rate">
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+              </div>
+              <h3 class="h5 text-primary mb-4">Budi Santoso</h3>
+              <blockquote>
+                <p>
+                  &ldquo;Tim BOROBUDUR BUMI MANDIRI sangat membantu dalam proses pembelian properti saya. Mereka
+                  sangat
+                  responsif dan memberikan saran yang berharga. Saya merasa sangat puas dengan keputusan saya!&rdquo;
+                </p>
+              </blockquote>
+              <p class="text-black-50">Pembeli Rumah Pertama</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimonial">
+              <img src="images/ai5.png" alt="Image" class="img-fluid rounded-circle w-25 mb-4" />
+              <div class="rate">
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+                <span class="icon-star text-warning"></span>
+              </div>
+              <h3 class="h5 text-primary mb-4">Rina Wulandari</h3>
+              <blockquote>
+                <p>
+                  &ldquo;Saya sangat terkesan dengan profesionalisme PT. BOROBUDUR BUMI MANDIRI. Mereka tidak hanya
+                  membantu saya menemukan properti, tetapi juga memberikan informasi yang jelas dan transparan tentang
+                  prosesnya.&rdquo;
+                </p>
+              </blockquote>
+              <p class="text-black-50">Pengusaha Sukses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3>Contact</h3>
+            <address>Jl. Karanja Lembah No.16, Kalukubula, Kec. Sigi Biromaru, Kabupaten Sigi, Sulawesi Tengah</address>
+            <ul class="list-unstyled links">
+              <li><a href="tel://081298681480">(+62)81298681480</a></li>
+              <li><a href="tel://082299986190">(+62)82299986190</a></li>
+              <li><a href="mailto:borobudurproperty6@gmail.com">borobudurproperty6@gmail.com</a></li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3>Sources</h3>
+            <ul class="list-unstyled float-start links">
+              <li><a href="about.html">About us</a></li>
+              <li><a href="about.html">Layanan</a></li>
+              <li><a href="about.html">Vision</a></li>
+              <li><a href="about.html">Mission</a></li>
+              <li><a href="about.html">Terms</a></li>
+              <li><a href="about.html">Privacy</a></li>
+            </ul>
+            <ul class="list-unstyled float-start links">
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Creative</a></li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <div class="widget">
+            <h3>Links</h3>
+            <ul class="list-unstyled links">
+              <li><a href="about.html">Our Vision</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <ul class="list-unstyled social">
+              <li><a href="https://www.instagram.com/borobudur_property/"><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.facebook.com/mohrizal.h"><span class="icon-facebook"></span></a></li>
+              <li><a href="https://wa.me/6281298681480"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <p>
+            Hak Cipta &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . Semua Hak Dilindungi Undang-Undang. &mdash; Dirancang Oleh
+            <a href="https://untree.co">Hans</a>
+          </p>
+          <div>
+            Didistribusikan oleh
+            <a href="https://themewagon.com/" target="_blank">PT. BOROBUDUR BUMI MANDIRI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.site-footer -->
+
+  <!-- Preloader -->
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/tiny-slider.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/custom.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
